@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="List_of_mess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHF-zp-lCm">
+                                <rect key="frame" x="315" y="28" width="60" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XaU-bV-Eit"/>
+                                    <constraint firstAttribute="width" constant="60" id="rtV-j6-8Xz"/>
+                                </constraints>
+                                <state key="normal" title="DODAJ"/>
+                                <connections>
+                                    <action selector="addBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aOs-lq-Fcw"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dodaj zadanie" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WbM-wb-cHo">
+                                <rect key="frame" x="16" y="28" width="284" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0bm-Qu-sxl"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v4k-LH-G9o">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SHF-zp-lCm" secondAttribute="trailing" id="3Q7-xn-fkr"/>
+                            <constraint firstItem="SHF-zp-lCm" firstAttribute="leading" secondItem="WbM-wb-cHo" secondAttribute="trailing" constant="15" id="Au9-nK-DJx"/>
+                            <constraint firstItem="v4k-LH-G9o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Guj-qj-duP"/>
+                            <constraint firstItem="WbM-wb-cHo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ftz-eK-gJu"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v4k-LH-G9o" secondAttribute="bottom" id="hWv-NH-9Kl"/>
+                            <constraint firstItem="WbM-wb-cHo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="i9L-uP-SIO"/>
+                            <constraint firstItem="SHF-zp-lCm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="lla-Dv-GTd"/>
+                            <constraint firstAttribute="trailing" secondItem="v4k-LH-G9o" secondAttribute="trailing" id="rDi-R1-WQD"/>
+                            <constraint firstItem="v4k-LH-G9o" firstAttribute="top" secondItem="WbM-wb-cHo" secondAttribute="bottom" id="rya-sD-7BT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="iteamTextField" destination="WbM-wb-cHo" id="hR8-Qo-0Hq"/>
+                        <outlet property="tableView" destination="v4k-LH-G9o" id="zrg-9B-WuX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
