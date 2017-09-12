@@ -71,6 +71,5 @@ extension TodoList: UITableViewDataSource {
         return cell
     }
     
-    
 }
 

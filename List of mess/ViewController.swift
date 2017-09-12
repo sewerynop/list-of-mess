@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         tableView.dataSource = todoList
-        
+        //self.iteamTextField.delegate = (self as! UITextFieldDelegate)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,6 +39,11 @@ class ViewController: UIViewController {
         todoList.addItem(item: text)
         tableView.reloadData()
         iteamTextField.text = ""
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool{
+        textField.resignFirstResponder()
+        return true
     }
     
 }
