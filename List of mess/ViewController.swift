@@ -33,8 +33,12 @@ class ViewController: UIViewController {
         guard let text = iteamTextField.text else {
             return
         }
+        if iteamTextField.text == ""{
+        return
+        }
         todoList.addItem(item: text)
         tableView.reloadData()
+        iteamTextField.text = ""
     }
     
 }
